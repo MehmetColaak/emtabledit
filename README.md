@@ -43,16 +43,6 @@ python -m unittest discover tests
 - Safe writes: saves go to a temp file first and rename over the target,
   so a failed write never destroys an existing file.
 
-## Known limitation
-
-Classic Tajima DST has no dedicated "trim" byte — `pyembroidery`'s DST
-writer signals a trim as a short run of plain JUMP stitches (a "jump tie"
-convention), which only works if the receiving machine infers trim the
-same way. Very old or non-Tajima-lineage machines may not do this
-inference at all, in which case DST trims will silently not fire on that
-hardware regardless of what the stitch table shows. There's no fix for
-this within the DST format itself.
-
 ## License
 
 MIT — see `LICENSE`.
