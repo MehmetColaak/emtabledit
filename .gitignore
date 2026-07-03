@@ -1,0 +1,18 @@
+# virtual environments (there are two here historically — emtable/ and .venv/,
+# pick one before packaging; both are ignored either way)
+emtable/
+.venv/
+venv/
+
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# local scratch, not part of the published project
+archive/
+
+# editors / OS
+.vscode/
+.idea/
+.DS_Store
